@@ -1,0 +1,12 @@
+# Generated datasets (build artifacts produced by number_theory/utils/*_generator.py)
+data_stores/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# OS
+.DS_Store

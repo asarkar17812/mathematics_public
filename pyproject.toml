@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "maths_coding"
+version = "0.0.0"
+description = "Computational pure mathematics, written to illustrate ideas in number theory, algebra, and geometry."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Ayush Sarkar" }]
+keywords = [
+    "mathematics",
+    "number-theory",
+    "algebra",
+    "algebraic-geometry",
+    "elliptic-curves",
+    "galois-theory",
+    "differential-geometry",
+    "information-geometry",
+    "dynamical-systems",
+    "perturbation-theory",
+    "sagemath",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Education",
+    "Topic :: Scientific/Engineering :: Mathematics",
+    "Programming Language :: Python :: 3",
+]
+
+# NOTE: SageMath is the core dependency but is *not* pip-installable in the usual way;
+# install it via conda-forge or your system package manager first (see README), then
+# `pip install -e .` into that environment. numpy/matplotlib ship with Sage and are
+# listed here only so the metadata is complete.
+dependencies = [
+    "numpy",
+    "matplotlib",
+]
+
+[project.urls]
+Repository = "https://github.com/ayushsarkar/maths_coding"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-dir]
+"" = "src"
